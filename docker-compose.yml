@@ -1,0 +1,13 @@
+services:
+    app:
+        image: roblox_dev_environment
+        container_name: roblox_dev_environment_c
+        build: .
+        volumes:
+            - "${VOLUME_C_PATH}:/mnt/c"
+            - "${VOLUME_D_PATH}:/mnt/d"
+        ports:
+            - "34873:34873"
+            - "34872:34872"
+        environment:
+            - COMPOSE_DIR
