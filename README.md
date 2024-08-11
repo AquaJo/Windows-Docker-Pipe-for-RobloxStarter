@@ -12,7 +12,10 @@ Be sure to run the npm command or the ps1 file before each session, so the comma
 
 ## What do I do?
 
-I mainly make some functionality of windows commands and windows-host access available inside of docker containers by letting them address `powershell.exe` and `cmd.exe`
+I mainly make some functionality of windows commands and windows-host access available inside of docker containers by letting them address `powershell.exe` and `cmd.exe`.\
+The scripts for making this possible inside the docker container are located in [WSL_Insert](./WSL_Insert/).
+
+It is named after WSL because I wanted to port a WSL2-project, therefore making a Linux container more 'Windows-like' and therefore more WSL-like.
 
 ## Adaptions you'll need to undergo (e.g. in nodejs)
 
@@ -24,7 +27,7 @@ I mainly make some functionality of windows commands and windows-host access ava
   - to get the last entry feel free to use:\
     `data = data.split("\n"); data = data.length > 1 ? data[data.length - 2].trim() : data[0];`
 
-## TODO
+## Todo
 
 - Handle accumulation of zombie defuncts listed in `ps aux`
 - Think about how to make docker supportive inside wsl itself

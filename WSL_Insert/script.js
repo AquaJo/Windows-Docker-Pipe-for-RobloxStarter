@@ -61,7 +61,8 @@ let command =
       }
     })
     .join(" ");
-// test if its a docker linux path
+// test if a file src is referenced through -File param and make it available in windows (direct windows paths wont work & it will also copy it to the processes folder if its already a windows mount reference)
+// if you use -File be sure you don't use spaces in the path as of now!!
 const fileParamRegex = / -File ([\/][^\s]+)/;
 
 if (fileParamRegex.test(command)) {
