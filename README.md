@@ -34,3 +34,4 @@ It is named after WSL because I wanted to port a WSL2-project, therefore making 
 - Error passing?
 - Smarter process handling, logging
 - Infinite-Counter-Reset inside docker container processes-specifying?
+- volume mapping option
